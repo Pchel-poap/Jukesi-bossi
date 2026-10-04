@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.fragment_registration)
 
         val editTextName = findViewById<EditText>(R.id.editTextName)
         val radioGroupGender = findViewById<RadioGroup>(R.id.radioGroupGender)
