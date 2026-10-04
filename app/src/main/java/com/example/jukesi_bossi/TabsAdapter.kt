@@ -12,7 +12,7 @@ class TabsAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
         return when (position) {
             0 -> RegistrationFragment()
             1 -> RulesFragment()
-            //2 -> AuthorsFragment()
+            2 -> AuthorsFragment()
             //3 -> SettingsFragment()
             else -> RegistrationFragment()
         }
