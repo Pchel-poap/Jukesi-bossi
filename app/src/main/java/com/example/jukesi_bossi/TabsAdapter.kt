@@ -4,16 +4,21 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class TabsAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
+class TabsAdapter(
+    activity: FragmentActivity
+) : FragmentStateAdapter(activity) {
 
-    override fun getItemCount(): Int = 4
+    override fun getItemCount(): Int = 5
 
-    override fun createFragment(position: Int): Fragment {
+    override fun createFragment(
+        position: Int
+    ): Fragment {
         return when (position) {
             0 -> RegistrationFragment()
-            1 -> RulesFragment()
-            2 -> AuthorsFragment()
-            3 -> SettingsFragment()
+            1 -> GameFragment()
+            2 -> RulesFragment()
+            3 -> AuthorsFragment()
+            4 -> SettingsFragment()
             else -> RegistrationFragment()
         }
     }
