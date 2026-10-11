@@ -87,6 +87,7 @@ class SettingsFragment : Fragment(
             listener { progress ->
                 GameSettings.speed =
                     progress + 1
+                GameSettings.restartGame = true
 
                 textSpeed.text =
                     "Скорость игры: ${GameSettings.speed}"
@@ -97,6 +98,7 @@ class SettingsFragment : Fragment(
             listener { progress ->
                 GameSettings.maxBugs =
                     progress + 1
+                GameSettings.restartGame = true
 
                 textMaxBugs.text =
                     "Максимум тараканов: ${GameSettings.maxBugs}"
@@ -107,6 +109,7 @@ class SettingsFragment : Fragment(
             listener { progress ->
                 GameSettings.bonusInterval =
                     progress + 5
+                GameSettings.restartGame = true
 
                 textBonusInterval.text =
                     "Интервал бонусов: ${GameSettings.bonusInterval} сек."
@@ -117,6 +120,7 @@ class SettingsFragment : Fragment(
             listener { progress ->
                 GameSettings.roundDuration =
                     progress + 30
+                GameSettings.restartGame = true
 
                 textRoundDuration.text =
                     "Длительность раунда: ${GameSettings.roundDuration} сек."

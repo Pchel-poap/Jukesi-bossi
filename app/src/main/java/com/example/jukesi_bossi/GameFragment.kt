@@ -179,6 +179,15 @@ class GameFragment : Fragment(R.layout.fragment_game) {
         popup.show()
     }
 
+    override fun onResume() {
+        super.onResume()
+
+        if (GameSettings.restartGame) {
+            GameSettings.restartGame = false
+            startRound()
+        }
+    }
+
     override fun onDestroyView() {
         timer?.cancel()
         gameView.stopGame()

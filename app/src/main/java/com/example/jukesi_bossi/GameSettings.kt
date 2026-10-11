@@ -5,4 +5,6 @@ object GameSettings {
     var maxBugs = 10
     var bonusInterval = 15
     var roundDuration = 60
+
+    var restartGame = false
 }
